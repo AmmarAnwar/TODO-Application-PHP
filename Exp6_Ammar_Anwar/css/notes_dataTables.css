@@ -1,0 +1,19 @@
+#myTable_wrapper {
+    position: static;
+}
+
+.dataTables_length {
+    padding: 20px 13px;
+}
+
+.dataTables_filter {
+    margin-bottom: 12px;
+}
+
+#myTable {
+    border-bottom: none;
+}
+
+#myTable thead tr th {
+    border-bottom: none;
+}

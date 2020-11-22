@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --maindark: #262626;
+    --mainlight: wheat;
+    --light: white;
+    --dark: #505050;
+    --primary: turquoise;
+}
+
+.header {
+    height: 12vh;
+    display: flex;
+    background: var(--maindark);
+    justify-content: center;
+    align-items: center;
+    color: var(--mainlight);
+}
+
+.addNotes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.addNotes h1 {
+    color: var(--dark);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin: 5px 0px 10px 0px;
+}
+
+.addNotes form, .container {
+    min-width: 300px;
+    width: 100%;
+    max-width: 850px;
+    padding: 0px 30px;
+}
+
+.container {
+    margin: 120px auto;
+}
+
+.title, .description {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+input, textarea {
+    outline: none;
+    padding: 6px;
+    margin-top: 4px;
+    width: 100%;
+}
+
+input:focus, textarea:focus {
+    border: 2px solid var(--primary);
+}
+
+.submit {
+    outline: none;
+    background: #009879;
+    border: none;
+    color: var(--light);
+    width: 25%;
+    padding: 11px 0px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.submit:hover {
+    opacity: 0.8;
+    color: var(--maindark);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 4px var(--maindark);
+}
+
+.table thead tr {
+    text-align: left;
+    font-weight: bold;
+    color: white;
+    background-color: #009879;
+}
+
+.table th, .table td {
+    padding: 13px 8px;
+    border-bottom: none;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+.action {
+    width: 60px;
+    border: none;
+    outline: none;
+    background: #009879;
+    color: white;
+    border-radius: 3px;
+    padding: 2px 0px;
+    margin: 2px 0px;
+    cursor: pointer;
+}

@@ -1,0 +1,71 @@
+.alert {
+    background: #ffdb9b;
+    padding: 20px 15px;
+    min-width: 310px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    border-left: 8px solid #ffa502;
+    border-right: 8px solid #ffa502;
+    display: none;
+    z-index: 2;
+}
+
+.alert.show {
+    display: block;
+    z-index: 2;
+    animation: show 1s ease forwards;
+}
+
+@keyframes show {
+    0% {
+        transform: translate(-50%, -100%);
+    }
+    40% {
+        transform: translate(-50%, 25%);
+    }
+    100% {
+        transform: translate(-50%, 5%);
+    }
+}
+
+.hide {
+    display: block;
+    z-index: 2;
+    animation: hide 1s ease forwards;
+}
+
+@keyframes hide {
+    0% {
+        transform: translate(-50%, 5%);
+    }
+    40% {
+        transform: translate(-50%, 25%);
+    }
+    100% {
+        transform: translate(-50%, -100%);
+    }
+}
+
+.fa-exclamation-circle {
+    color: #ce8500;
+    font-size: 20px;
+}
+
+.msg {
+    color: #ce8500;
+    font-size: 15px;
+    line-height: 29px;
+}
+
+.fa-times {
+    color: #ce8500;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.fa-times:hover {
+    color: #cc993b;
+}

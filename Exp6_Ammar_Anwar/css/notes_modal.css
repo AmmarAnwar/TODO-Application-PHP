@@ -1,0 +1,66 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    z-index: 999;
+    background-color: #fbfbfb;
+    width: 300px;
+    max-width: 80%;
+    box-shadow: 0 0 10px #ffffff;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+}
+
+/*
+    We are using `scale` property instead of `dispaly:none`, so that we will be able to smoothly scale with animation in-and-out
+ */
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #262626;
+}
+
+.modal-header .title {
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.modal-header .close-button {
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    padding: 10px 20px;
+    text-align: justify;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
